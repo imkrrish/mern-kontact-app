@@ -43,11 +43,12 @@ class ContactController extends BaseController {
       return this.getDbError(reason);
     });
 
+    
     if (getAllContactsRes.error) {
       this.sendError(res, this.getModifiedError(getAllContactsRes, Status.ERROR_CODES.contacts.get_db_error_msg));
     }
-
-    if (getAllContactsRes.length == 0) {
+    
+    if (getAllContactsRes.length === 0) {
       Logger.error('getAllContacts: ' + Status.SERVER_ERRORS.contact_not_found);
       this.sendError(res, Status.ERROR_CODES.contacts.contact_not_found_msg);
       return;

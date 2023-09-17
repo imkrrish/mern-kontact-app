@@ -3,9 +3,15 @@ import { Icontact } from '../types/ContactTypes';
 
 const ContactSchema: Schema = new Schema(
   {
-    name: String,
+    name: {
+      type: String,
+      lowercase: true,
+    },
     phone: Number,
-    email: String,
+    email: {
+      type: String,
+      lowercase: true,
+    },
   },
   { timestamps: true }
 );
