@@ -28,21 +28,21 @@ cd mern-kontact-app
 
 2. Install dependencies:
 
-```shell
-npm install
-```
+   ```shell
+   npm install
+   ```
 
 3. Set up environment variables:
 
-Create a .env file in the backend directory with following environment variables to your .env file:
+   Create a .env file in the backend directory with following environment variables to your .env file:
 
-```shell
-MONGODB_URI=mongodb://127.0.0.1:27017/Kontact
-NODE_ENV=dev
-PORT=5000
-RATE_LIMIT_TIME=3000
-RATE_LIMIT_REQUEST=100
-```
+      ```shell
+      MONGODB_URI=mongodb://127.0.0.1:27017/Kontact
+      NODE_ENV=dev
+      PORT=5000
+      RATE_LIMIT_TIME=3000
+      RATE_LIMIT_REQUEST=100
+      ```   
 
 4. Start the development server:
 
@@ -62,9 +62,9 @@ RATE_LIMIT_REQUEST=100
 2. Set up environment variables:
    Create a .env.local file in the frontend directory with following environment variables to your .env file:
 
-```shell
-NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
-```
+      ```shell
+      NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+      ```
 
 3. Start the development server:
 
