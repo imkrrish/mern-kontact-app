@@ -1,5 +1,6 @@
 import { BsPersonFillAdd, BsSearch } from "react-icons/bs";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle";
 
 const Layout = ({ children, handleSearch, addContactFormToggle }: any) => {
   return (
@@ -7,11 +8,11 @@ const Layout = ({ children, handleSearch, addContactFormToggle }: any) => {
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-gray-100 mb-4 md:mb-0">
-            <img className="h-10 w-10 bg-white rounded-lg" src="./logo.svg" alt="logo" />
-            <span className="ml-3 text-xl">Kontact</span>
+            <img className="h-10 w-10 bg-white rounded-lg shadow-md" src="./logo.svg" alt="logo" />
+            <span className="ml-3 text-xl text-txt-primary-color">Kontact</span>
           </a>
           <nav className="md:ml-auto flex items-center gap-4">
-            <div className="relative flex items-center w-auto h-9 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+            <div className="relative flex items-center w-auto h-9 rounded-lg focus-within:shadow-lg bg-white overflow-hidden shadow-md">
               <div className="grid place-items-center h-full w-12 text-gray-500">
                 <BsSearch />
               </div>
@@ -20,17 +21,18 @@ const Layout = ({ children, handleSearch, addContactFormToggle }: any) => {
             </div>
             <button
               onClick={() => addContactFormToggle(true)}
-              className="inline-flex gap-2 items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-lg font-semibold mt-4 md:mt-0"
+              className="inline-flex gap-2 items-center bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-lg font-semibold mt-4 md:mt-0 shadow-md"
             >
               <BsPersonFillAdd className="text-xl" />
               Add Contact
             </button>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
 
       <main>{children}</main>
-      <footer className="w-full text-center py-4 bg-gray-800 text-lg tracking-wider">
+      <footer className="w-full text-center py-4 bg-primary-color text-lg tracking-wider text-txt-primary-color">
         <h1>
           Made with ❤️ by{" "}
           <Link href={"https://www.linkedin.com/in/imkrrish/"} target="_blank" className="hover:text-blue-600 underline">
