@@ -3,7 +3,7 @@ import { BiSortAlt2 } from "react-icons/bi";
 
 const Table = ({ contacts, handleSort, handleDelete, handleUpdate, loading }: any) => {
   return (
-    <div className="w-[98%] mx-auto px-2 py-4 bg-primary-color rounded-xl mb-8">
+    <div className="w-[98%] mx-auto px-2 py-4 bg-primary-color rounded-xl mb-8 hidden md:block">
       <table className="w-[98%] table-auto mx-auto">
         <thead className="rounded-lg bg-secondary-color border-b-4 border-b-primary-color">
           <tr>

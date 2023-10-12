@@ -8,6 +8,7 @@ import UpdateContactForm from "@/components/UpdateContactForm";
 import { DefaultSeo } from "@/components/Seo";
 import { debounce } from "@utils/helper";
 import { ToastContainer, toast } from "react-toastify";
+import ContactCard from "@/components/ContactCard";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -131,6 +132,7 @@ export default function Home() {
         <Model isVisible={updateFormToggle} title="Update Contact" onClose={() => setUpdateFormToggle(false)}>
           <UpdateContactForm handleUpdateContact={handleUpdateContact} updateFormData={updateFormData} />
         </Model>
+        <ContactCard loading={loading} contacts={contacts} handleSort={handleSort} handleDelete={handleDelete} handleUpdate={handleUpdate} />
         <Table loading={loading} contacts={contacts} handleSort={handleSort} handleDelete={handleDelete} handleUpdate={handleUpdate} />
       </Layout>
     </>

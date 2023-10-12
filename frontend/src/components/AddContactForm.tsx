@@ -17,7 +17,7 @@ const AddContactForm = ({ handleAddContact }: any) => {
     handleAddContact(formData);
   };
   return (
-    <form className="p-5 w-96" onSubmit={handleSubmit}>
+    <form className="p-5 sm:w-96 w-[70vw]" onSubmit={handleSubmit}>
       <div className="mb-4">
         <label htmlFor="name" className="leading-7 text-sm text-gray-600 font-semibold tracking-wide">
           Name:
