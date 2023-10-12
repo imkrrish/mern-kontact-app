@@ -33,7 +33,7 @@ const Table = ({ contacts, handleSort, handleDelete, handleUpdate, loading }: an
           </tr>
         </thead>
         <tbody className="bg-gray-600 ">
-          {contacts.length > 0 && contacts.map((obj: any, i: number) => <TableRow {...obj} sno={i + 1} key={i} handleDelete={handleDelete} handleUpdate={handleUpdate} />)}
+          {contacts.length > 0 && !loading && contacts.map((obj: any, i: number) => <TableRow {...obj} sno={i + 1} key={i} handleDelete={handleDelete} handleUpdate={handleUpdate} />)}
         </tbody>
       </table>
       {contacts.length === 0 ? (

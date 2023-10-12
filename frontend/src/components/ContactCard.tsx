@@ -5,17 +5,17 @@ const ContactCard = ({ contacts, handleSort, handleDelete, handleUpdate, loading
   return (
     <>
       <div className="w-full md:hidden text-center mt-2">
-        <button onClick={handleSort} className="inline-flex gap-2 items-center bg-[rgb(244,63,94)] border-0 py-1 px-3 focus:outline-none rounded text-md font-semibold mt-0 shadow-md">
+        <button onClick={handleSort} className="inline-flex gap-2 items-center bg-[#b5d8f6] border-0 py-1 px-3 focus:outline-none rounded text-md font-semibold mt-0 shadow-md">
           Sort by Name
           <BiSortAlt2 className="text-lg" />
         </button>
       </div>
 
       {contacts.length === 0 ? (
-        <h1 className="w-full text-center py-2 text-xl my-5 text-txt-primary-color">No Contact Data Found</h1>
+        <h1 className="md:hidden w-full text-center py-2 text-xl my-5 text-txt-primary-color">No Contact Data Found</h1>
       ) : (
         loading && (
-          <div aria-label="Loading..." role="status" className="w-full py-4 my-5">
+          <div aria-label="Loading..." role="status" className="w-full py-4 my-5 md:hidden">
             <svg className="animate-spin w-10 h-10 fill-[#329fff] mx-auto" viewBox="3 3 18 18">
               <path
                 className="opacity-20"
@@ -29,6 +29,7 @@ const ContactCard = ({ contacts, handleSort, handleDelete, handleUpdate, loading
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden w-full px-4 mt-4 mb-8">
         {contacts.length > 0 &&
+          !loading &&
           contacts.map((obj: any, i: number) => (
             <div className="bg-primary-color space-y-3 p-4 rounded-lg shadow-md capitalize" key={i}>
               <div className="flex items-center space-x-2 text-sm">
